@@ -6,7 +6,8 @@ development.
 
 ## Specify Cache
 The Specify Cache stores records submitted by Specify Collections for public access via 
-the Specify-assigned GUID, held in the DarwinCore occurrenceID field.
+the Specify-assigned GUID, held in the DarwinCore occurrenceID field.  It holds records
+for Specify collections without a public endpoint for each record.
 
 ## Specify Resolver
 The Specify Resolver retrieves the URL of a Specify record given the Specify-assigned 
