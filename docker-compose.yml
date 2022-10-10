@@ -60,12 +60,20 @@ services:
       - "webpack-output:/volumes/webpack-output"
       - "static-files:/home/specify/specify_network/frontend/static"
 
+  frontend:
+    build:
+      context: ./.
+      target: frontend
+    volumes:
+      - "webpack-output:/home/node/dist"
+
   nginx:
     image: nginx:1.21.3-alpine
     restart: unless-stopped
     depends_on:
       - resolver
       - sp_cache
+      - broker
     networks:
       - nginx
     ports:

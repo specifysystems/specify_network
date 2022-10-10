@@ -3,7 +3,7 @@ services:
   runner:
     build:
       context: ./.
-      target: dev-flask
+      target: flask-dev
     ports:
       - "5001:5001"
     environment:
@@ -18,7 +18,7 @@ services:
   sp_cache:
     build:
       context: ./.
-      target: dev-flask
+      target: flask-dev
     ports:
       - "5002:5002"
     environment:
@@ -33,7 +33,7 @@ services:
   broker:
     build:
       context: ./.
-      target: dev-flask
+      target: flask-dev
     ports:
       - "5003:5003"
     environment:
@@ -48,7 +48,7 @@ services:
   front-end:
     build:
       context: ./.
-      target: base-front-end
+      target: frontend-base
     command: ["npm", "run", "watch"]
     volumes:
       - "./frontend/js_src/lib/:/home/node/lib/"

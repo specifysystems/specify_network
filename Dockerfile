@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.10.0rc2-alpine3.14 as base
+FROM python:3.10.0rc2-alpine3.14 as flask-base
 
 LABEL maintainer="Specify Collections Consortium <github.com/specify>"
 
@@ -24,7 +24,7 @@ RUN python -m venv venv \
 
 
 
-FROM base as dev-flask
+FROM flask-base as flask-dev
 # Debug image reusing the base
 # Install dev dependencies for debugging
 RUN venv/bin/pip install debugpy
@@ -38,8 +38,13 @@ CMD venv/bin/python -m debugpy --listen 0.0.0.0:${DEBUG_PORT} -m ${FLASK_MANAGE}
 
 
 
+FROM flask-base as flask
+ENV FLASK_ENV=production
+CMD venv/bin/python -m gunicorn -w 4 --bind 0.0.0.0:5000 ${FLASK_APP}
 
-FROM base as flask
+
+
+FROM node:16.10.0-buster as frontend-base
 
 LABEL maintainer="Specify Collections Consortium <github.com/specify>"
 
@@ -54,6 +59,7 @@ RUN mkdir dist \
 
 COPY --chown=node:node frontend/js_src .
 
-COPY --chown=specify:specify ./flask_app ./flask_app
-ENV FLASK_ENV=production
-CMD venv/bin/python -m gunicorn -w 4 --bind 0.0.0.0:5000 ${FLASK_APP}
+
+FROM frontend-base as frontend
+
+RUN npm run build
