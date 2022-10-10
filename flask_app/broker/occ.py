@@ -1,18 +1,18 @@
 from http import HTTPStatus
 from werkzeug.exceptions import (BadRequest, InternalServerError)
 
-from lmtrex.common.lmconstants import (APIService, ServiceProvider)
-from lmtrex.common.s2n_type import (S2nKey, S2nOutput, S2nSchema, print_s2n_output)
+from common.lmconstants import (APIService, ServiceProvider)
+from common.s2n_type import (S2nKey, S2nOutput, S2nSchema, print_s2n_output)
 
-from lmtrex.tools.provider.gbif import GbifAPI
-from lmtrex.tools.provider.idigbio import IdigbioAPI
-from lmtrex.tools.provider.mopho import MorphoSourceAPI
-from lmtrex.tools.provider.specify import SpecifyPortalAPI
-from lmtrex.tools.provider.specify_resolver import SpecifyResolverAPI
+from tools.provider.gbif import GbifAPI
+from tools.provider.idigbio import IdigbioAPI
+from tools.provider.mopho import MorphoSourceAPI
+from tools.provider.specify import SpecifyPortalAPI
+from tools.provider.specify_resolver import SpecifyResolverAPI
 
-from lmtrex.tools.s2n.utils import get_traceback
+from tools.s2n.utils import get_traceback
 
-from lmtrex.flask_app.broker.base import _S2nService
+from flask_app.broker.base import _S2nService
 
 class OccurrenceSvc(_S2nService):
     SERVICE_TYPE = APIService.Occurrence
@@ -167,7 +167,7 @@ class OccurrenceSvc(_S2nService):
 
         Return:
             a dictionary with keys for each service queried.  Values contain 
-            lmtrex.services.api.v1.S2nOutput object with optional records as a 
+            services.api.v1.S2nOutput object with optional records as a
             list of dictionaries of records corresponding to specimen 
             occurrences in the provider database
         """
@@ -210,7 +210,7 @@ class OccurrenceSvc(_S2nService):
 
 # .............................................................................
 if __name__ == '__main__':
-    from lmtrex.common.lmconstants import TST_VALUES
+    from common.lmconstants import TST_VALUES
     # occids = TST_VALUES.GUIDS_WO_SPECIFY_ACCESS[0:3]
     occids = ['84fe1494-c378-4657-be15-8c812b228bf4', 
               '04c05e26-4876-4114-9e1d-984f78e89c15', 

@@ -2,7 +2,7 @@
 
 from flask.cli import FlaskGroup
 
-from lmtrex.flask_app.broker.routes import app
+from flask_app.broker.routes import app
 
 cli = FlaskGroup(app)
 

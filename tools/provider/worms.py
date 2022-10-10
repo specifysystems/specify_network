@@ -2,13 +2,12 @@ from collections import OrderedDict
 from http import HTTPStatus
 import urllib
 
-from lmtrex.common.lmconstants import (
+from common.lmconstants import (
     ENCODING, GBIF, ServiceProvider, URL_ESCAPES, WORMS)
-from lmtrex.common.s2n_type import S2nEndpoint, S2nOutput, S2nSchema
+from common.s2n_type import S2nEndpoint, S2nOutput, S2nSchema
 
-
-from lmtrex.tools.provider.api import APIQuery
-from lmtrex.tools.s2n.utils  import get_traceback, add_errinfo
+from tools.provider.api import APIQuery
+from tools.s2n.utils  import get_traceback, add_errinfo
 
 # .............................................................................
 class WormsAPI(APIQuery):

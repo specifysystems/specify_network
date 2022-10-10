@@ -1,6 +1,6 @@
 
-from lmtrex.common.lmconstants import (APIService, SPECIFY_CACHE_API)
-from lmtrex.flask_app.broker.base import _S2nService
+from common.lmconstants import (APIService, SPECIFY_CACHE_API)
+from flask_app.broker.base import _S2nService
 
 # .............................................................................
 class AddressSvc(_S2nService):

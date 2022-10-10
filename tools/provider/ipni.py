@@ -4,12 +4,12 @@ import pykew.ipni as ipni
 from pykew.ipni_terms import Name
 import urllib
 
-from lmtrex.common.lmconstants import (
+from common.lmconstants import (
     ENCODING, ServiceProvider, URL_ESCAPES, WORMS)
-from lmtrex.common.s2n_type import S2nEndpoint, S2nOutput, S2nSchema
+from common.s2n_type import S2nEndpoint, S2nOutput, S2nSchema
 
-from lmtrex.tools.provider.api import APIQuery
-from lmtrex.tools.s2n.utils  import get_traceback
+from tools.provider.api import APIQuery
+from tools.s2n.utils  import get_traceback
 
 # .............................................................................
 class IpniAPI(APIQuery):

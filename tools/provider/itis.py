@@ -2,12 +2,12 @@ from collections import OrderedDict
 from http import HTTPStatus
 import urllib
 
-from lmtrex.common.lmconstants import (
+from common.lmconstants import (
     ITIS, ServiceProvider, URL_ESCAPES, TST_VALUES)
-from lmtrex.common.s2n_type import S2nEndpoint, S2nOutput, S2nSchema
-from lmtrex.tools.fileop.logtools import log_info
-from lmtrex.tools.provider.api import APIQuery
-from lmtrex.tools.s2n.utils import get_traceback, add_errinfo
+from common.s2n_type import S2nEndpoint, S2nOutput, S2nSchema
+from tools.fileop.logtools import log_info
+from tools.provider.api import APIQuery
+from tools.s2n.utils import get_traceback, add_errinfo
 
 
 # .............................................................................
@@ -467,7 +467,7 @@ class ItisAPI(APIQuery):
 # .............................................................................
 if __name__ == '__main__':
     # test
-    from lmtrex.tools.provider.gbif import GbifAPI
+    from tools.provider.gbif import GbifAPI
     
     names = TST_VALUES.NAMES[:5]
     canonicals = GbifAPI.parse_names(names=names)

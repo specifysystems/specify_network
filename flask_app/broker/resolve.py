@@ -1,11 +1,11 @@
 from http import HTTPStatus
 from werkzeug.exceptions import (BadRequest, InternalServerError)
 
-from lmtrex.common.lmconstants import (APIService)
-from lmtrex.common.s2n_type import (S2nKey, S2nOutput, S2nSchema, print_s2n_output)
-from lmtrex.flask_app.broker.base import _S2nService
-from lmtrex.tools.provider.specify_resolver import SpecifyResolverAPI
-from lmtrex.tools.s2n.utils import get_traceback
+from common.lmconstants import (APIService)
+from common.s2n_type import (S2nKey, S2nOutput, S2nSchema, print_s2n_output)
+from flask_app.broker.base import _S2nService
+from tools.provider.specify_resolver import SpecifyResolverAPI
+from tools.s2n.utils import get_traceback
 
 collection = 'spcoco'
 solr_location = 'notyeti-192.lifemapper.org'
@@ -128,7 +128,7 @@ class ResolveSvc(_S2nService):
 # .............................................................................
 if __name__ == '__main__':
     # test
-    from lmtrex.common.lmconstants import TST_VALUES
+    from common.lmconstants import TST_VALUES
     
     params = [None, TST_VALUES.GUIDS_W_SPECIFY_ACCESS[0]]
     for occid in params:

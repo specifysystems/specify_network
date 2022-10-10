@@ -1,11 +1,10 @@
 from werkzeug.exceptions import BadRequest, InternalServerError
 
-from lmtrex.common.lmconstants import (APIService, ServiceProvider, TST_VALUES)
-from lmtrex.common.s2n_type import (S2nKey, S2nOutput, S2nSchema, print_s2n_output)
-from lmtrex.flask_app.broker.base import _S2nService
-from lmtrex.tools.provider.gbif import GbifAPI
-from lmtrex.tools.provider.lifemapper import LifemapperAPI
-from lmtrex.tools.s2n.utils import get_traceback, combine_errinfo, add_errinfo
+from common.lmconstants import (APIService, ServiceProvider, TST_VALUES)
+from common.s2n_type import (S2nKey, S2nOutput, S2nSchema, print_s2n_output)
+from flask_app.broker.base import _S2nService
+from tools.provider.gbif import GbifAPI
+from tools.s2n.utils import get_traceback, combine_errinfo, add_errinfo
 
 # .............................................................................
 class MapSvc(_S2nService):

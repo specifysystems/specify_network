@@ -3,13 +3,13 @@ import io
 import os
 from werkzeug.exceptions import (BadRequest, InternalServerError, NotImplemented)
 
-from lmtrex.common.lmconstants import (
+from common.lmconstants import (
     APIService, ICON_CONTENT, ICON_DIR, ServiceProvider, VALID_ICON_OPTIONS)
-from lmtrex.common.s2n_type import S2nKey
+from common.s2n_type import S2nKey
 
-from lmtrex.tools.s2n.utils import get_traceback
+from tools.s2n.utils import get_traceback
 
-from lmtrex.flask_app.broker.base import _S2nService
+from flask_app.broker.base import _S2nService
 
 
 # .............................................................................

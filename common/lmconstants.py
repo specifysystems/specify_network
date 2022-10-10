@@ -1,5 +1,5 @@
 # from collections import OrderedDict
-from lmtrex.common.s2n_type import S2nEndpoint, S2nKey
+from common.s2n_type import S2nEndpoint, S2nKey
 
 # .............................................................................
 # hierarchySoFarWRanks <class 'list'>: ['41107:$Kingdom:Plantae$Subkingdom:Viridiplantae$Infrakingdom:Streptophyta$Superdivision:Embryophyta$Division:Tracheophyta$Subdivision:Spermatophytina$Class:Magnoliopsida$Superorder:Lilianae$Order:Poales$Family:Poaceae$Genus:Poa$Species:Poa annua$']

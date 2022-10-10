@@ -2,16 +2,16 @@ from flask import Flask, jsonify, request, render_template, url_for
 import json
 import os
 
-from lmtrex.common.lmconstants import (
+from common.lmconstants import (
     TEMPLATE_DIR, STATIC_DIR, SCHEMA_DIR, SCHEMA_FNAME)
-from lmtrex.flask_app.broker.address import AddressSvc
-from lmtrex.flask_app.broker.badge import BadgeSvc
-from lmtrex.flask_app.broker.frontend import FrontendSvc
-from lmtrex.flask_app.broker.map import MapSvc
-from lmtrex.flask_app.broker.name import NameSvc
-from lmtrex.flask_app.broker.occ import OccurrenceSvc
-from lmtrex.flask_app.broker.resolve import ResolveSvc
-from lmtrex.flask_app.broker.stats import StatsSvc
+from flask_app.broker.address import AddressSvc
+from flask_app.broker.badge import BadgeSvc
+from flask_app.broker.frontend import FrontendSvc
+from flask_app.broker.map import MapSvc
+from flask_app.broker.name import NameSvc
+from flask_app.broker.occ import OccurrenceSvc
+from flask_app.broker.resolve import ResolveSvc
+from flask_app.broker.stats import StatsSvc
 
 # downloadable from <baseurl>/static/schema/open_api.yaml
 

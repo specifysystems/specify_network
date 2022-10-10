@@ -1,6 +1,6 @@
-from lmtrex.common.lmconstants import (APIService)
-from lmtrex.frontend.templates import frontend_template
-from lmtrex.flask_app.broker.base import _S2nService
+from common.lmconstants import (APIService)
+from frontend.templates import frontend_template
+from flask_app.broker.base import _S2nService
 
 
 # .............................................................................

@@ -3,15 +3,15 @@ import requests
 import xml.etree.ElementTree as ET
 import zipfile
 
-from lmtrex.common.lmconstants import (
+from common.lmconstants import (
     SPECIFY_ARK_PREFIX, DWCA, ENCODING, TEST_SPECIFY7_SERVER, TST_VALUES,
     SPECIFY7_RECORD_ENDPOINT, SPECIFY7_SERVER_KEY, SPCOCO_FIELDS)
-from lmtrex.tools.fileop.logtools import (LMLog, log_info, log_warn, log_error)
-from lmtrex.tools.fileop.csvtools import (get_csv_dict_reader, get_csv_dict_writer)
-from lmtrex.tools.fileop.ready_file import ready_filename, delete_file
-from lmtrex.tools.provider.api import APIQuery
-import lmtrex.tools.misc.solr as SpSolr
-from lmtrex.tools.s2n.utils import is_valid_uuid
+from tools.fileop.logtools import (LMLog, log_info, log_warn, log_error)
+from tools.fileop.csvtools import (get_csv_dict_reader, get_csv_dict_writer)
+from tools.fileop.ready_file import ready_filename, delete_file
+from tools.provider.api import APIQuery
+import tools.misc.solr as SpSolr
+from tools.s2n.utils import is_valid_uuid
 
 
 INCR_KEY = 0

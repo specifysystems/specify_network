@@ -2,8 +2,8 @@ import sys
 import traceback
 from uuid import UUID
 
-from lmtrex.common.lmconstants import ICON_API, ServiceProvider
-from lmtrex.common.s2n_type import S2nEndpoint
+from common.lmconstants import ICON_API, ServiceProvider
+from common.s2n_type import S2nEndpoint
 
 
 # ......................................................

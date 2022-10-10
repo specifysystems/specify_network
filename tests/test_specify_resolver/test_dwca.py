@@ -2,10 +2,10 @@ import os
 import shutil
 import time
 
-from lmtrex.tools.misc.dwca import (
+from tools.misc.dwca import (
     assemble_download_filename, DwCArchive, get_dwca_urls, download_dwca)
-from lmtrex.tools.s2n.utils import is_valid_uuid
-from lmtrex.common.lmconstants import (DWCA, TST_VALUES)
+from tools.s2n.utils import is_valid_uuid
+from common.lmconstants import (DWCA, TST_VALUES)
 
 
 today = time.localtime()

@@ -2,15 +2,15 @@ import csv
 from http import HTTPStatus
 import os
 
-from lmtrex.common.issue_definitions import ISSUE_DEFINITIONS
-from lmtrex.common.lmconstants import (
+from common.issue_definitions import ISSUE_DEFINITIONS
+from common.lmconstants import (
     GBIF_MISSING_KEY, Idigbio, ServiceProvider, ENCODING, DATA_DUMP_DELIMITER)
-from lmtrex.common.s2n_type import S2nEndpoint, S2nKey, S2nSchema
-from lmtrex.tools.fileop.logtools import (log_info)
-from lmtrex.tools.fileop.ready_file import ready_filename
+from common.s2n_type import S2nEndpoint, S2nKey, S2nSchema
+from tools.fileop.logtools import (log_info)
+from tools.fileop.ready_file import ready_filename
 
-from lmtrex.tools.provider.api import APIQuery
-from lmtrex.tools.s2n.utils import add_errinfo
+from tools.provider.api import APIQuery
+from tools.s2n.utils import add_errinfo
 
 # .............................................................................
 class IdigbioAPI(APIQuery):

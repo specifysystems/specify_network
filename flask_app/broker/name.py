@@ -1,16 +1,16 @@
 from http import HTTPStatus
 from werkzeug.exceptions import (BadRequest, InternalServerError)
 
-from lmtrex.common.lmconstants import (APIService, ServiceProvider)
-from lmtrex.common.s2n_type import (S2nKey, S2nOutput, S2nSchema, print_s2n_output)
+from common.lmconstants import (APIService, ServiceProvider)
+from common.s2n_type import (S2nKey, S2nOutput, S2nSchema, print_s2n_output)
 
-from lmtrex.flask_app.broker.base import _S2nService
+from flask_app.broker.base import _S2nService
 
-from lmtrex.tools.provider.gbif import GbifAPI
-from lmtrex.tools.provider.ipni import IpniAPI
-from lmtrex.tools.provider.itis import ItisAPI
-from lmtrex.tools.provider.worms import WormsAPI
-from lmtrex.tools.s2n.utils import get_traceback
+from tools.provider.gbif import GbifAPI
+from tools.provider.ipni import IpniAPI
+from tools.provider.itis import ItisAPI
+from tools.provider.worms import WormsAPI
+from tools.s2n.utils import get_traceback
 
 # .............................................................................
 class NameSvc(_S2nService):
