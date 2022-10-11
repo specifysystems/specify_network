@@ -16,9 +16,9 @@ The Specify Broker houses objects and common tools used within a Broker installa
 that may also be useful for outside contributors and the community as a whole.
 
 Any community contributed tool through the
-[lmtrex repository](https://github.com/lifemapper/lmtrex/) should
+[specify_network repository](https://github.com/specifysystems/specify_network/) should
 use these objects to ensure that new contributions are compatible with the
-Lifemapper backend.
+Specify Network.
 
 ## Specify Cache
 The Specify Cache stores records submitted by Specify Collections for public access via 
@@ -60,7 +60,7 @@ to provide as much value and feedback to the community as possible.
 
 To run the containers, generate `fullchain.pem` and `privkey.pem` (certificate
 and the private key) using Let's Encrypt and put these files into the
-`./lmsyft/config/` directory.
+`./config/` directory.
 
 While in development, you can generate self-signed certificates:
 
@@ -140,7 +140,7 @@ port `5002`, `broker` on port `5003`.
 
 You can setup a cron job to process pending DWCAs.
 
-See `./cron/lmsyft_process_dwcas_cron.in`.
+See `./cron/process_dwcas_cron.in`.
 
-Note, you many need to modify `lmsyft-sp_cache-1` to reflect your container
-name.
+Note, you many need to modify the container name in this script (`sp_cache-1`) to 
+reflect your container name.
