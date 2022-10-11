@@ -4,7 +4,7 @@ from common.lmconstants import (MorphoSource, ServiceProvider, TST_VALUES)
 from common.s2n_type import S2nEndpoint, S2nKey, S2nSchema
 from tools.fileop.logtools import (log_info)
 from tools.provider.api import APIQuery
-from tools.s2n.utils import add_errinfo, get_traceback
+from tools.misc.utils import add_errinfo, get_traceback
 
 # .............................................................................
 class MorphoSourceAPI(APIQuery):

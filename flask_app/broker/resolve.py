@@ -5,7 +5,7 @@ from common.lmconstants import (APIService)
 from common.s2n_type import (S2nKey, S2nOutput, S2nSchema, print_s2n_output)
 from flask_app.broker.base import _S2nService
 from tools.provider.specify_resolver import SpecifyResolverAPI
-from tools.s2n.utils import get_traceback
+from tools.misc.utils import get_traceback
 
 collection = 'spcoco'
 solr_location = 'notyeti-192.lifemapper.org'

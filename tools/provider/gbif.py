@@ -6,13 +6,13 @@ import urllib
 
 from common.issue_definitions import ISSUE_DEFINITIONS
 from common.lmconstants import (
-    APIService, GBIF, ServiceProvider, URL_ESCAPES, ENCODING)
+    GBIF, ServiceProvider, URL_ESCAPES, ENCODING)
 from common.s2n_type import S2nEndpoint, S2nKey, S2nOutput, S2nSchema
 from tools.fileop.logtools import (log_info, log_error)
 
 
 from tools.provider.api import APIQuery
-from tools.s2n.utils  import get_traceback, add_errinfo
+from tools.misc.utils import get_traceback, add_errinfo
 
 # .............................................................................
 class GbifAPI(APIQuery):

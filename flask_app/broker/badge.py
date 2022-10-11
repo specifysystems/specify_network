@@ -7,7 +7,7 @@ from common.lmconstants import (
     APIService, ICON_CONTENT, ICON_DIR, ServiceProvider, VALID_ICON_OPTIONS)
 from common.s2n_type import S2nKey
 
-from tools.s2n.utils import get_traceback
+from tools.misc.utils import get_traceback
 
 from flask_app.broker.base import _S2nService
 

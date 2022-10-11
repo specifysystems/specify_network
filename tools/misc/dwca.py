@@ -11,7 +11,7 @@ from tools.fileop.csvtools import (get_csv_dict_reader, get_csv_dict_writer)
 from tools.fileop.ready_file import ready_filename, delete_file
 from tools.provider.api import APIQuery
 import tools.misc.solr as SpSolr
-from tools.s2n.utils import is_valid_uuid
+from tools.misc.utils import is_valid_uuid
 
 
 INCR_KEY = 0

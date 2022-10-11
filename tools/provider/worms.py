@@ -3,11 +3,12 @@ from http import HTTPStatus
 import urllib
 
 from common.lmconstants import (
-    ENCODING, GBIF, ServiceProvider, URL_ESCAPES, WORMS)
+    ENCODING, ServiceProvider, URL_ESCAPES, WORMS)
 from common.s2n_type import S2nEndpoint, S2nOutput, S2nSchema
 
 from tools.provider.api import APIQuery
-from tools.s2n.utils  import get_traceback, add_errinfo
+from tools.misc.utils import get_traceback
+
 
 # .............................................................................
 class WormsAPI(APIQuery):

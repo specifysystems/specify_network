@@ -1,16 +1,15 @@
 """Module containing functions for API Queries"""
 from http import HTTPStatus
 import requests
-import typing
 import urllib
 
 from common.lmconstants import (URL_ESCAPES, ENCODING)
 from common.s2n_type import S2nKey, S2nOutput
 from tools.fileop.logtools import (log_warn)
 from tools.misc.lm_xml import fromstring, deserialize
-from tools.s2n.utils import add_errinfo, combine_errinfo, get_traceback
+from tools.misc.utils import add_errinfo
 
-import tools.s2n.utils as lmutil
+import tools.misc.utils as lmutil
 # .............................................................................
 class APIQuery:
     """Class to query APIs and return results.

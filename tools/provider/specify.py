@@ -3,7 +3,7 @@ from http import HTTPStatus
 from common.lmconstants import (JSON_HEADERS, ServiceProvider)
 from common.s2n_type import S2nEndpoint, S2nOutput, S2nSchema
 from tools.provider.api import APIQuery
-from tools.s2n.utils import add_errinfo
+from tools.misc.utils import add_errinfo
 
 # .............................................................................
 class SpecifyPortalAPI(APIQuery):

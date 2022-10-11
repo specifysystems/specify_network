@@ -10,7 +10,7 @@ from tools.provider.mopho import MorphoSourceAPI
 from tools.provider.specify import SpecifyPortalAPI
 from tools.provider.specify_resolver import SpecifyResolverAPI
 
-from tools.s2n.utils import get_traceback
+from tools.misc.utils import get_traceback
 
 from flask_app.broker.base import _S2nService
 
@@ -210,7 +210,6 @@ class OccurrenceSvc(_S2nService):
 
 # .............................................................................
 if __name__ == '__main__':
-    from common.lmconstants import TST_VALUES
     # occids = TST_VALUES.GUIDS_WO_SPECIFY_ACCESS[0:3]
     occids = ['84fe1494-c378-4657-be15-8c812b228bf4', 
               '04c05e26-4876-4114-9e1d-984f78e89c15', 

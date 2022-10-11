@@ -4,7 +4,7 @@ import time
 
 from tools.misc.dwca import (
     assemble_download_filename, DwCArchive, get_dwca_urls, download_dwca)
-from tools.s2n.utils import is_valid_uuid
+from tools.misc.utils import is_valid_uuid
 from common.lmconstants import (DWCA, TST_VALUES)
 
 

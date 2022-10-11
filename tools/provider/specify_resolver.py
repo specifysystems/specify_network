@@ -1,9 +1,9 @@
 from http import HTTPStatus
 
-from common.lmconstants import (APIService, SYFTER, ServiceProvider)
+from common.lmconstants import (SYFTER, ServiceProvider)
 from common.s2n_type import COMMUNITY_SCHEMA, S2nEndpoint, S2nKey, S2nOutput, S2nSchema
 from tools.provider.api import APIQuery
-from tools.s2n.utils import get_traceback, add_errinfo
+from tools.misc.utils import get_traceback, add_errinfo
 
 # .............................................................................
 class SpecifyResolverAPI(APIQuery):

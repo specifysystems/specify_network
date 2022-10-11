@@ -9,7 +9,7 @@ from common.lmconstants import (
 from common.s2n_type import S2nEndpoint, S2nOutput, S2nSchema
 
 from tools.provider.api import APIQuery
-from tools.s2n.utils  import get_traceback
+from tools.misc.utils import get_traceback
 
 # .............................................................................
 class IpniAPI(APIQuery):

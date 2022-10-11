@@ -10,7 +10,7 @@ from tools.fileop.logtools import (log_info)
 from tools.fileop.ready_file import ready_filename
 
 from tools.provider.api import APIQuery
-from tools.s2n.utils import add_errinfo
+from tools.misc.utils import add_errinfo
 
 # .............................................................................
 class IdigbioAPI(APIQuery):

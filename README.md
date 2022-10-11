@@ -86,7 +86,7 @@ Run the containers:
 docker compose up -d
 ```
 
-lmsyft is now available at [https://localhost/](https://localhost:443)
+specify_network is now available at [https://localhost/](https://localhost:443)
 
 ### Development
 

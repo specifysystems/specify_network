@@ -10,7 +10,7 @@ from tools.provider.gbif import GbifAPI
 from tools.provider.ipni import IpniAPI
 from tools.provider.itis import ItisAPI
 from tools.provider.worms import WormsAPI
-from tools.s2n.utils import get_traceback
+from tools.misc.utils import get_traceback
 
 # .............................................................................
 class NameSvc(_S2nService):
