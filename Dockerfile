@@ -44,7 +44,7 @@ CMD venv/bin/python -m gunicorn -w 4 --bind 0.0.0.0:5000 ${FLASK_APP}
 
 
 
-FROM node:16.10.0-buster as frontend-base
+FROM node:18.10.0-buster as frontend-base
 
 LABEL maintainer="Specify Collections Consortium <github.com/specify>"
 
